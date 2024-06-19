@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>Survey Form</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="form">
+    <h1 id="title">Survey Form</h1>
+    <p id="description">Will you be able to access the Elden Ring DLC and do you care?</p>
+    <form id="survey-form">
+      <fieldset>
+        <label for="name" id="name-label">Name: <input id="name" name="name" type="text" placeholder="Yessario Andrews" required/></label>
+        <label for="email" id="email-label">Email: <input id="email" name="email" type="email" placeholder="yesand@gmail.com" required/></label>
+        <label for="number" id="number-label">Phone Number: <input id="number" name="number" type="number" pattern="[0-9]{10}" min="1000000000" max="9999999999" placeholder="1234567890" required/></label>
+      </fieldset>
+      <fieldset>
+        <label for="dropdown">Have you beat Mohg or Radahn?
+          <select id="dropdown" name="dropdown">
+            <option>(select one)</option>
+            <option>I beat Radahn</option>
+            <option>I beat Mohg</option>
+            <option>I beat both Radahn and Mohg</option>
+          </select>
+        </label>
+      </fieldset>
+      <fieldset>
+        <legend>What was your primary playstyle?</legend>
+        <label for="melee"><input id="melee" type="radio" name="playstyle" value="melee" class="inline"/>Melee</label>
+        <label for="ranged"><input id="ranged" type="radio" name="playstyle" value="ranged" class="inline"/>Ranged</label>
+      </fieldset>
+      <fieldset>
+        <legend>Which attributes did you heavily invest in?(select all that apply)</legend>
+        <label>
+          <input class="inline" id="build" type="checkbox" value="0"/> Vigor
+        </label>
+        <label>
+          <input class="inline" id="build" type="checkbox" value="1"/> Mind
+        </label>
+        <label>
+          <input class="inline" id="build" type="checkbox" value="2"/> Endurance
+        </label>
+        <label>
+          <input class="inline" id="build" type="checkbox" value="3"/> Strength
+        </label>
+        <label>
+          <input class="inline" id="build" type="checkbox" value="4"/> Dexterity
+        </label>
+        <label>
+          <input class="inline" id="build" type="checkbox" value="5"/> Intelligence
+        </label>
+        <label>
+          <input class="inline" id="build" type="checkbox" value="6"/> Faith
+        </label>
+        <label>
+          <input class="inline" id="build" type="checkbox" value="7"/> Arcane
+        </label>
+      </fieldset>
+      <fieldset>
+        <label>Additional Comments:
+          <textarea id="add-comments" name="add-comments" rows="3" cols="30" placeholder="I need at least 2 pills of Git Gud/ I think I've gotten all the Gud I could care for..."></textarea>
+        </label>
+      </fieldset>
+      <input id="submit" type="submit" value="Submit"/>
+    </form>
+    </div>
+  </body>
+</html>
